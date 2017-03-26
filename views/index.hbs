@@ -1,0 +1,42 @@
+<div class="jumbotron">
+  <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-12">
+          <div class="list-group" id="user-list">
+          </div>
+        </div>
+        <div class="col-md-8 col-sm-12">
+          <form id="chat_app_form" action="#">
+            <div class="row">
+              <div class="col-md-12">
+                <!-- <label for="message_area">Message</label>
+                <textarea class="form-control" id="message_area" disabled rows="7"></textarea> -->
+                <ul class="message-list">
+
+                </ul>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-10">
+                <input type="text" name="message" id="message" class="form-control" />
+              </div>
+              <div class="col-md-2">
+                <button type="submit" name="send" id="send" class="btn btn-block btn-primary">Send</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+</div>
+<script src="/javascripts/chat.js" charset="utf-8"></script>
+<script type="text/template" id="user-template">
+  <button type="button" class="list-group-item list-group-item-action user-button">
+    <%= name %>
+  </button>
+</script>
+
+<script type="text/template" id="message-template">
+    <span class="chat-name"><%= from_name %></span>:
+    <span class="chat-text"><%= msg %></span>
+</script>
